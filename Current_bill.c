@@ -2,32 +2,32 @@
 int main()
 {
     int n;
-    float charge,sc,bill;
     scanf("%d",&n);
-    if(n<=199)
+    float charge,sc,bill;
+    if(n<200)
     {
-        charge=1.20*n;
+        bill=1.20*n;
     }
-    else if (n>=200 && n<400)
+    else if(n>=200 && n<400)
     {
-        charge=1.50*n;
+        bill=1.50*n;
     }
     else if(n>=400 && n<600)
     {
-        charge=1.80*n;
+        bill=1.80*n;
     }
     else if(n>=600)
     {
-        charge=2.00*n;
+        bill=2.00*n;
     }
-    if(charge>400)
+    if(bill>=400)
     {
-        sc=0.15*charge;
+        sc=0.15*bill;
     }
     else
     {
         sc=100;
     }
-    bill=charge+sc;
-    printf("%.2f",bill);
+    charge=sc+bill;
+    printf("%.2f",charge);
 }
